@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+<head>
+    <title>EDA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href = "{{ url_for('static',filename='stylesheets/form.css') }}" charset="utf-8" />
+    <script type = 'text/javascript' src="{{ url_for('static',filename='jquery.js') }}"> </script>
+</head>
+<body>
+<button onclick="window.location.href='/home';" >View Data</button>
+<button onclick="window.location.href='/eda';" >EDA</button>
+<button onclick="window.location.href='/feature_selection';" >Data Cleaning</button>
+<button onclick="window.location.href='/feature_selection';" >Feature Selection</button>
+<button onclick="window.location.href='/modelling';" >Modelling</button>
+
+<br><br><br><br>
+
+
+<div class = container_form>
+<form action = "/submit_eda" method="post" enctype="multipart/form-data">
+        <select name = "chart_dropdown">
+        <option value = "line">Line Plot</option>
+        <option value = "hist" selected>Histogram</option>
+        <option value = "bar">Bar</option>
+        <option value = "scatter">Scatter</option>
+        <option value = "box">Box</option>
+        <option value = "violin">Violin</option>
+        <option value = "heatmap">Heatmap</option>
+        <option value = "scatter_3d">Scatter_3d</option>
+        <option value = "line_3d">Line_3d</option>
+        </select>
+        <label for="x" class="col-15"><b>x</b></label>
+        <input type="text" class="col-25" name="x" id="x">
+        <label for="y" class="col-15"><b>y</b></label>
+        <input type="text" class="col-25" name="y" id="y">
+        <label for="z" class="col-15"><b>z (only for 3D plots and heatmap)</b></label>
+        <input type="text" class="col-25" name="z" id="z">
+        <label for="color" class="col-15"><b>color</b></label>
+        <input type="text" class="col-25" name="color" id="color">
+        <input type="submit" class="col-25" value="submit">
+
+</form>
+</div>
+<br>
+
+<div id="chart1">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var graph1 = {{ jpl | safe}};
+        Plotly.plot("chart1",graph1,{});
+    </script>
+</div>
+</body>
+</html>
