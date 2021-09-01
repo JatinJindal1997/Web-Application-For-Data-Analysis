@@ -1,0 +1,127 @@
+input[type=file], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+body: {
+  background-color:#b9894b;
+  height : 0.98;
+  width : 0.98;
+}
+
+label {
+  padding: 6px 6px 6px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #610000;
+  color: #dbc3a3;
+  padding: 12px 20px;
+  border: 1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button {
+  background-color: green;
+  color: #dbc3a3;
+  padding: 12px 20px;
+  border: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit]:hover {
+  background-color: #e0e0e0;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+table, th    {
+  border: 1px solid black;
+}
+
+table {
+    padding: 12px 20px;
+    float : center;
+    height : 0.9;
+    width : 0.9;
+    overflow-x: auto;
+    overflow-y: auto;
+    color : #610000;
+}
+
+tr {
+    height : 0.9;
+    width : 0.9;
+}
+
+form {
+float = left;
+width : 0.7;
+padding: 5px;
+text-align : center;
+}
+
+.container_form {
+  height : 200px;
+  width : 0.7;
+  border-radius: 5px;
+  background-color:blue;
+  padding: 12px 20px;
+  color: #000000;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.container {
+  height : 400px;
+  width : 0.95;
+  border-radius: 5px;
+  background-color:blue;
+  padding: 12px 20px;
+  color: #0f0f0f;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+.col-25 {
+  width: auto;
+  margin-top: 6px;
+}
+
+.col-50 {
+  width: auto;
+  margin-top: 6px;
+}
+
+.col-15 {
+  width: auto;
+  margin-top: 2px;
+}
+
+.col-75 {
+  width: 75%;
+  margin-top: 6px;
+}
